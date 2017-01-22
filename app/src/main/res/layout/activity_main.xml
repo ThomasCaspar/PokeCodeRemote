@@ -32,6 +32,7 @@
                 android:layout_height="55sp"
                 android:text="UpButton"
                 android:id="@+id/BoutonHaut"
+                android:onClick="vitessePlus"
                 android:layout_gravity="top|center_horizontal"
                 android:layout_weight="1" />
 
@@ -48,6 +49,7 @@
                     android:layout_height="fill_parent"
                     android:text="Brakes"
                     android:id="@+id/BoutonFrein"
+                    android:onClick="frein"
                     android:layout_weight="1"/>
 
                 <Button
@@ -55,6 +57,7 @@
                     android:layout_height="fill_parent"
                     android:text="Warning"
                     android:id="@+id/BoutonWarning"
+                    android:onClick="warning"
                     android:gravity="center_vertical|center_horizontal"
                     android:layout_weight="1"/>
             </LinearLayout>
@@ -64,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:text="DownButton"
                 android:id="@+id/BoutonBas"
+                android:onClick="vitesseMoins"
                 android:layout_weight="1"
                 android:layout_gravity="bottom|center_horizontal" />
         </LinearLayout>
@@ -102,13 +106,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="Headlights"
-                    android:id="@+id/BoutonPhares" />
+                    android:id="@+id/BoutonPhares"
+                    android:onClick="phares"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="Wipers"
-                    android:id="@+id/BoutonEGlaces" />
+                    android:id="@+id/BoutonEGlaces"
+                    android:onClick="essuieGlaces"/>
             </LinearLayout>
 
             <Button
@@ -116,6 +122,7 @@
                 android:layout_height="wrap_content"
                 android:text="EmergencyStop"
                 android:id="@+id/BoutonArretUrg"
+                android:onClick="freinUrgences"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.17" />
 
@@ -157,6 +164,7 @@
                 android:layout_height="wrap_content"
                 android:text="RightButton"
                 android:id="@+id/BoutonDroit"
+                android:onClick="tourneDroit"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.33" />
 
@@ -171,13 +179,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="LeftIndic"
-                    android:id="@+id/BoutonClignGauche" />
+                    android:id="@+id/BoutonClignGauche"
+                    android:onClick="clignGauche"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="RightIndic"
-                    android:id="@+id/BoutonClignDroit" />
+                    android:id="@+id/BoutonClignDroit"
+                    android:onClick="clignDroit"/>
             </LinearLayout>
 
             <Button
@@ -185,6 +195,7 @@
                 android:layout_height="wrap_content"
                 android:text="LeftButton"
                 android:id="@+id/BoutonGauche"
+                android:onClick="tourneGauche"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.33" />
         </LinearLayout>
