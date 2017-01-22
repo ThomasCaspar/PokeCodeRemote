@@ -24,52 +24,27 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="left|center_vertical"
-            android:layout_weight="0.30"
-            android:weightSum="3">
-
-            <Button
-                android:layout_width="75sp"
-                android:layout_height="55sp"
-                android:text="UpButton"
-                android:id="@+id/BoutonHaut"
-                android:onClick="vitessePlus"
-                android:layout_gravity="top|center_horizontal"
-                android:layout_weight="1" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:weightSum="2">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:text="Brakes"
-                    android:id="@+id/BoutonFrein"
-                    android:onClick="frein"
-                    android:layout_weight="1"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:text="Warning"
-                    android:id="@+id/BoutonWarning"
-                    android:onClick="warning"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:layout_weight="1"/>
-            </LinearLayout>
+            android:layout_weight="0.37"
+            android:weightSum="2">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DownButton"
-                android:id="@+id/BoutonBas"
-                android:onClick="vitesseMoins"
+                android:text="+"
+                android:id="@+id/BoutonPlus"
+                android:layout_gravity="top|center_horizontal"
                 android:layout_weight="1"
-                android:layout_gravity="bottom|center_horizontal" />
+                android:textSize="42dp" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/BoutonBas"
+                android:layout_weight="1"
+                android:layout_gravity="bottom|center_horizontal"
+                android:textSize="42dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -81,9 +56,9 @@
             android:weightSum="1">
 
             <Button
-                android:layout_width="45sp"
+                android:layout_width="match_parent"
                 android:layout_height="35sp"
-                android:text="BT"
+                android:text="Connexion"
                 android:onClick="list"
                 android:id="@+id/buttonList"/>
 
@@ -93,57 +68,49 @@
                 android:id="@+id/listView"
                 android:layout_alignLeft="@+id/button"
                 android:layout_alignStart="@+id/button"
-                android:fastScrollEnabled="false" />
+                android:fastScrollEnabled="false"
+                android:layout_gravity="center_horizontal" />
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_horizontal"
                 android:layout_weight="0.33">
 
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:text="Headlights"
-                    android:id="@+id/BoutonPhares"
-                    android:onClick="phares"/>
+                    android:layout_height="wrap_content"
+                    android:text="Phares Avant"
+                    android:id="@+id/BoutonPhares"/>
 
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:text="Wipers"
-                    android:id="@+id/BoutonEGlaces"
-                    android:onClick="essuieGlaces"/>
+                    android:layout_height="wrap_content"
+                    android:text="Essuie-glaces"
+                    android:id="@+id/BoutonEGlaces"/>
             </LinearLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="EmergencyStop"
-                android:id="@+id/BoutonArretUrg"
-                android:onClick="freinUrgences"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.17" />
+
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Vitesse"
                 android:id="@+id/VitesseText"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="0.07"
+                android:layout_weight="0.17"
                 android:gravity="center_vertical|center_horizontal" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="0"
                 android:id="@+id/VitesseDisplay"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="0.33"
+                android:layout_weight="0.40"
                 android:textAlignment="center"
                 android:numeric="integer"
                 android:gravity="center_vertical|center_horizontal" />
@@ -162,9 +129,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RightButton"
-                android:id="@+id/BoutonDroit"
-                android:onClick="tourneDroit"
+                android:text="Marche avant"
+                android:id="@+id/BoutonAvant"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.33" />
 
@@ -177,27 +143,30 @@
 
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:text="LeftIndic"
-                    android:id="@+id/BoutonClignGauche"
-                    android:onClick="clignGauche"/>
+                    android:layout_height="match_parent"
+                    android:text="Tourner Gauche"
+                    android:id="@+id/BoutonGauche"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.50" />
 
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:text="RightIndic"
-                    android:id="@+id/BoutonClignDroit"
-                    android:onClick="clignDroit"/>
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:text="Tourner Droite"
+                    android:id="@+id/BoutonDroit"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.5" />
 
+
+            </LinearLayout>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LeftButton"
-                android:id="@+id/BoutonGauche"
-                android:onClick="tourneGauche"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.33" />
+                android:text="Freiner"
+                android:id="@+id/BoutonFrein"
+                android:layout_gravity="center"
+                android:layout_weight="0.33"/>
+
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
